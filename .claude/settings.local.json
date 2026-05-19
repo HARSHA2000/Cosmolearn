@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --no-git)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --no-git --yes)",
+      "Bash(npx create-next-app@14 cosmolearn-tmp --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --no-git --yes)",
+      "Bash(npx create-next-app@14 cosmolearn-tmp --typescript --tailwind --eslint --app --no-src-dir --import-alias=\"@/*\" --no-git)",
+      "Bash(Get-ChildItem cosmolearn-tmp *)",
+      "Bash(Move-Item -Destination . -Force)",
+      "Bash(Remove-Item cosmolearn-tmp *)",
+      "Bash(npm install *)",
+      "Bash(mkdir -p \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\components\\\\ui\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\components\\\\layout\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\components\\\\home\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\components\\\\programs\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\components\\\\blog\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\components\\\\contact\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\lib\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\content\\\\programs\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\content\\\\blog\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\app\\\\api\\\\leads\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\app\\\\about\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\app\\\\programs\\\\[slug]\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\app\\\\blog\\\\[slug]\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\app\\\\contact\" \"c:\\\\Users\\\\Harsha\\\\Desktop\\\\personal\\\\CosmoLearn\\\\public\" 2>&1)",
+      "Bash(npm run *)",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); const keys = Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\('link'\\) || k.toLowerCase\\(\\).includes\\('git'\\) || k.toLowerCase\\(\\).includes\\('twit'\\) || k.toLowerCase\\(\\).includes\\('x'\\)\\).sort\\(\\); console.log\\(keys.join\\(', '\\)\\)\")",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); const keys = Object.keys\\(l\\).filter\\(k => !k.startsWith\\('Lucide'\\) && !k.endsWith\\('Icon'\\)\\).sort\\(\\).join\\('\\\\n'\\); console.log\\(keys\\)\")",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\('Mail' in l, 'X' in l, 'Globe' in l, 'Code2' in l, 'ExternalLink' in l, 'AtSign' in l\\)\")",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); const toCheck = ['Building', 'Building2', 'Monitor', 'Award', 'FileText', 'CheckCircle', 'AlertTriangle', 'BookOpen', 'Zap', 'Quote', 'Wrench', 'Clock', 'Users', 'Calendar', 'Download', 'Code2', 'Cpu', 'GitBranch']; toCheck.forEach\\(k => console.log\\(k, k in l\\)\\)\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Harsha\\Desktop\\personal\\CosmoLearn\\app\\programs"
+    ]
+  }
+}

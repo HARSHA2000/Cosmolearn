@@ -1,0 +1,98 @@
+---
+title: "What Engineering Colleges Get Wrong About AI Curriculum"
+slug: "what-engineering-colleges-get-wrong-about-ai-curriculum"
+date: "2024-11-15"
+excerpt: "Most AI/ML courses in engineering colleges haven't changed since 2019. Here's a ground-level view of what's broken — and what a better approach looks like."
+tags: ["fdp", "genai", "computer-vision"]
+author: "Harshith"
+---
+
+I've had the same conversation in about a dozen college staff rooms over the past two years.
+
+A TPO or HOD pulls up their current AI/ML course syllabus — often a PDF that hasn't been touched since 2020 — and asks me whether it prepares students for the industry. They already know the answer. They're asking because they want someone outside their department to say it out loud.
+
+The answer is: not really. And here's why.
+
+## The Textbook Problem
+
+Most AI/ML courses in engineering colleges are taught from textbooks published between 2015 and 2019. Those books cover:
+
+- Logistic regression, decision trees, SVMs
+- Basic neural network math (backpropagation, gradient descent)
+- "Introduction to Deep Learning" chapters that stop at CNNs
+- R or "MATLAB" exercises that no one uses in production
+
+None of this is *wrong*. Some of it is genuinely important foundational knowledge. But it describes a version of AI that the industry left behind several years ago.
+
+The gap between what's in those textbooks and what a fresh hire is expected to know on day one is enormous — and it's widening every year.
+
+## What the Industry Actually Uses
+
+When I'm hiring or reviewing resumes at Cosmoverge, here's what I'm actually looking for:
+
+**For a junior ML role:**
+- Can you fine-tune a pretrained model on a custom dataset?
+- Do you know how to use Hugging Face pipelines?
+- Can you wrap a model in a FastAPI endpoint?
+- Have you worked with vector databases for retrieval?
+
+**For a GenAI / LLM role:**
+- Can you build a RAG pipeline?
+- Do you understand prompt engineering beyond "write better prompts"?
+- Have you worked with LangChain or LlamaIndex?
+- Do you know the difference between fine-tuning and in-context learning?
+
+None of these appear in a 2019 textbook. Most of them didn't exist in 2019.
+
+## The Lab Problem
+
+Even when colleges have updated theory content, the lab component lags even further. The typical lab exercise:
+
+1. Load the Iris dataset
+2. Train a random forest classifier
+3. Print accuracy
+
+This builds zero transferable skills. In the real world, you spend 80% of your time on data — collecting it, cleaning it, augmenting it, versioning it. You don't get handed a pre-cleaned CSV.
+
+A better lab exercise:
+1. Scrape or photograph 200 images from a real scenario
+2. Annotate them using Roboflow
+3. Train a YOLO model
+4. Evaluate with mAP
+5. Deploy as an API
+
+That's one day of hands-on work that builds five tangible skills.
+
+## Why This Isn't the Faculty's Fault
+
+Faculty are not failing their students because they're lazy or incompetent. They're failing because the system isn't designed for keeping pace with this field.
+
+A faculty member teaching AI/ML is also teaching two other subjects, managing their own research, preparing for NAAC audits, and attending departmental meetings. Finding time to rebuild a course from scratch — using tools that changed fundamentally 18 months ago — is not realistic.
+
+This is why FDPs matter. Not as tick-box exercises, but as actual skill transfer sessions where faculty get hands-on with the tools their students will encounter in interviews.
+
+## What a Better Approach Looks Like
+
+When I design a workshop or FDP for a college, I start with a simple question: what would a first-year employee at a product company be expected to do on day 30?
+
+Then I work backwards from there.
+
+The answer in 2024 almost always involves:
+- Working with pre-trained models, not building from scratch
+- Using APIs (OpenAI, Hugging Face, Roboflow) as first-class tools
+- Understanding deployment — Docker, APIs, basic cloud
+- Knowing how to iterate on prompts and evaluate model outputs
+
+This doesn't replace foundational knowledge. Students still need to understand what a neural network is doing. But foundations should be taught in service of where the field actually is — not where it was in 2019.
+
+## The Opportunity for Colleges
+
+Colleges that update their AI/ML programs are going to see measurable placement outcomes in the next 2–3 years. The companies hiring right now are specifically looking for students who have shipped something with GenAI — a working RAG pipeline, a deployed object detection model, a chatbot with real functionality.
+
+A student who has done a 2-day hands-on workshop where they built and deployed something walks into an interview with a fundamentally different story to tell than one who trained a logistic regression model on the Iris dataset.
+
+That difference is real, and colleges that help their students build that story are going to have a recruiting advantage.
+
+---
+
+*Harshith runs AI/ML workshops and FDPs for engineering colleges across India. If you're thinking about updating your college's AI curriculum or running a student workshop, [reach out here](/contact).*

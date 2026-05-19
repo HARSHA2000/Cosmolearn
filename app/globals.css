@@ -2,26 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #f59e0b;
+    --primary: #0f172a;
+    --primary-foreground: #ffffff;
+    --secondary: #f1f5f9;
+    --secondary-foreground: #0f172a;
+    --muted: #f8fafc;
+    --muted-foreground: #64748b;
+    --accent: #f59e0b;
+    --accent-foreground: #0f172a;
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Code block styles */
+pre {
+  @apply rounded-lg overflow-x-auto text-sm;
+}
+
+code {
+  @apply text-sm font-mono;
+}
+
+/* MDX prose styles */
+.prose h2 {
+  @apply font-display text-2xl font-bold text-slate-900 mt-8 mb-4;
+}
+.prose h3 {
+  @apply font-display text-xl font-semibold text-slate-800 mt-6 mb-3;
+}
+.prose p {
+  @apply text-slate-600 leading-relaxed mb-4;
+}
+.prose ul {
+  @apply list-disc list-inside space-y-1 text-slate-600 mb-4 ml-4;
+}
+.prose ol {
+  @apply list-decimal list-inside space-y-1 text-slate-600 mb-4 ml-4;
+}
+.prose strong {
+  @apply text-slate-900 font-semibold;
+}
+.prose a {
+  @apply text-amber-600 hover:text-amber-700 underline;
+}
+.prose blockquote {
+  @apply border-l-4 border-amber-400 pl-4 italic text-slate-600 my-4;
 }

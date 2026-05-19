@@ -1,0 +1,128 @@
+---
+title: "Computer Vision Bootcamp"
+slug: "computer-vision-bootcamp"
+audience: "BE / MCA students (Python basics required)"
+duration: "3 days (24 hours)"
+format: "On-campus lab sessions"
+tools: ["OpenCV", "PyTorch", "YOLO", "Roboflow"]
+outcomes:
+  - "Build and evaluate an object detection model end-to-end"
+  - "Understand CNN architectures — from LeNet to ResNet to ViT"
+  - "Collect, annotate, and prepare a custom image dataset"
+  - "Run real-time inference on video streams"
+  - "Deploy a CV model as a REST API"
+aicte: true
+order: 2
+excerpt: "A 3-day deep-dive into computer vision using PyTorch, YOLO, and Roboflow. Students build and deploy an object detection model on a real-world dataset."
+---
+
+## What This Bootcamp Is About
+
+Computer Vision is the branch of AI that has had the most industrial deployment — from manufacturing defect detection to medical imaging to autonomous vehicles. This bootcamp teaches students to build real CV pipelines: from raw images to annotated datasets to trained models to deployed APIs.
+
+The focus is on YOLO-based object detection because it directly maps to real-world industry use cases. Every step of the pipeline — data, model, training, evaluation, deployment — is covered hands-on.
+
+## Curriculum
+
+### Day 1 — Image Processing Fundamentals (8 hours)
+
+**Module 1: How Machines See (1.5 hours)**
+- Pixel representations, color spaces (RGB, HSV, grayscale)
+- Image as a tensor — shapes, channels, and batch dimensions
+- Why spatial data is different from tabular data
+
+**Module 2: OpenCV in Practice (2.5 hours)**
+- Reading, resizing, and color-space conversion
+- Edge detection: Canny, Sobel
+- Contour detection and bounding boxes
+- Morphological operations
+- Hands-on: Build a card/document scanner using contour detection
+
+**Module 3: Deep Dive into CNNs (4 hours)**
+- Convolution operation — filters, stride, padding
+- Pooling, batch normalization, dropout
+- Architecture evolution: LeNet → AlexNet → VGG → ResNet
+- Transfer learning — why we don't train from scratch
+- Hands-on: Fine-tune ResNet-18 on a custom 5-class image dataset (PyTorch)
+
+### Day 2 — Object Detection with YOLO (8 hours)
+
+**Module 4: Object Detection Fundamentals (2 hours)**
+- Detection vs. classification vs. segmentation
+- Anchor boxes, IoU, non-max suppression
+- mAP — the primary evaluation metric
+- YOLO architecture: v5, v8, v11 comparison
+
+**Module 5: Dataset Preparation with Roboflow (2.5 hours)**
+- Image annotation workflow (bounding boxes)
+- Dataset augmentation strategies
+- Exporting to YOLO format
+- Hands-on: Annotate a small custom dataset (helmets / faces / objects)
+
+**Module 6: Training YOLOv8 (3.5 hours)**
+- YOLOv8 training configuration
+- Monitoring training with Ultralytics CLI
+- Evaluation: mAP, precision-recall curves, confusion matrix
+- Common failure modes and how to debug them
+- Hands-on: Full training run on the custom dataset from Module 5
+
+### Day 3 — Real-Time Inference and Deployment (8 hours)
+
+**Module 7: Running Models on Video (3 hours)**
+- Frame-by-frame inference on video files
+- Webcam inference with OpenCV
+- Tracking objects across frames (ByteTrack / SORT)
+- FPS optimization: batch inference, model quantization (INT8)
+- Hands-on: Real-time helmet/safety detection demo
+
+**Module 8: Deploying a CV API (3 hours)**
+- FastAPI basics — endpoints, file uploads, responses
+- Wrapping a YOLO model in a REST API
+- Dockerizing the API
+- Hands-on: Ship a working `/detect` endpoint that accepts an image and returns JSON
+
+**Module 9: Capstone Project (2 hours)**
+- Teams pick one:
+  - Pothole / road damage detection
+  - Attendance system using face detection
+  - Defect detection on custom manufactured parts (photos provided)
+  - PPE compliance checker (helmets, vests)
+- Build, evaluate, and present
+
+## What Students Will Build
+
+A fully functional object detection pipeline: annotated dataset → trained YOLOv8 model → FastAPI deployment → live demo. All artifacts are packaged for GitHub and interview portfolios.
+
+## Who Should Attend
+
+- BE / MCA students in CS, IS, AI/ML, Electronics, or Robotics streams
+- Students targeting computer vision roles, research internships, or product companies
+- Final year project students looking to add a real CV component
+
+## Prerequisites
+
+- Python basics: loops, functions, list comprehension
+- Basic numpy experience helpful (not required)
+- A laptop with at least 8GB RAM (GPU preferred, not required — Colab is sufficient)
+
+## Delivery Format
+
+- 3 full days on-campus (8 hours/day with breaks)
+- Live coding throughout — students follow along in Colab
+- Dedicated lab time each day with instructor support
+
+## AICTE Activity Points
+
+Eligible for **AICTE activity points** under the Technical Activities category. The bootcamp structure meets the minimum hour requirements for points credit.
+
+## What the College Receives
+
+- Pre-bootcamp environment setup guide
+- All Jupyter notebooks, trained model weights, and datasets
+- Participation certificates for each student
+- Project write-up template for department records
+- Summary feedback report
+
+## Inquiry
+
+Want to run this bootcamp at your college? [Request a proposal →](/contact?program=computer-vision-bootcamp)

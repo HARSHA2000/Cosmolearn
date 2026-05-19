@@ -1,0 +1,119 @@
+---
+title: "MLOps & Deployment for Final Year Projects"
+slug: "mlops-deployment-final-year"
+audience: "BE / MCA project students"
+duration: "1 day (8 hours)"
+format: "Hands-on lab"
+tools: ["Docker", "FastAPI", "AWS EC2", "GitHub Actions", "Prometheus + Grafana"]
+outcomes:
+  - "Deploy a real machine learning model to a live URL"
+  - "Understand the production ML lifecycle from training to monitoring"
+  - "Containerize an ML application with Docker"
+  - "Set up a CI/CD pipeline that auto-deploys on push"
+  - "Monitor model performance and server health in real-time"
+aicte: false
+order: 4
+excerpt: "A 1-day intensive lab where students take a trained ML model and deploy it to AWS with Docker, FastAPI, and CI/CD — the way it's done in industry."
+---
+
+## What This Lab Is About
+
+Most final year projects end at model training. The model sits in a Jupyter notebook, evaluated on a test set, and never used again. That gap — between a trained model and a deployed product — is exactly what this lab bridges.
+
+In one day, students take a pre-trained ML model (or bring their own final year project model) and deploy it to a live URL with proper containerization, automated deployment, and monitoring. This is what separates a "project" from a "product" on a resume.
+
+## Curriculum
+
+### Session 1 — FastAPI & Model Serving (2 hours)
+
+**The gap between notebook and production**
+- Why Flask/Streamlit is not production ML serving
+- REST API design for ML: inputs, outputs, versioning
+- FastAPI basics: routes, request models, response schemas
+- Async endpoints and why they matter at scale
+
+**Hands-on: Wrap your model in a FastAPI app**
+- Build a `/predict` endpoint that accepts JSON and returns predictions
+- Add `/health` and `/metrics` endpoints
+- Local testing with `curl` and the automatic Swagger UI
+- Handling errors: invalid inputs, model failures, timeouts
+
+### Session 2 — Containerization with Docker (2 hours)
+
+**Why Docker for ML deployments**
+- Dependency isolation — "it works on my machine" → solved
+- Image layers, caching, and build optimization
+- Docker for ML: dealing with large model files
+- Docker Compose for multi-container apps (API + database)
+
+**Hands-on: Dockerize your FastAPI ML app**
+- Write an efficient `Dockerfile` for a Python ML project
+- Build and run the container locally
+- Reduce image size: multi-stage builds, `.dockerignore`
+- Push to Docker Hub / GitHub Container Registry
+
+### Session 3 — AWS EC2 Deployment (2 hours)
+
+**Cloud fundamentals for engineers**
+- EC2 instance types: what to pick for ML serving
+- Security groups, IAM roles, and key-pair SSH
+- Nginx as a reverse proxy — routing traffic to your container
+
+**Hands-on: Deploy to a live EC2 instance**
+- SSH into an EC2 instance (pre-provisioned)
+- Pull Docker image and run the container
+- Configure Nginx to proxy `/predict` to the container
+- Test the live API endpoint from a browser
+
+### Session 4 — CI/CD and Monitoring (2 hours)
+
+**GitHub Actions for automated deployments**
+- What CI/CD means and why it matters
+- Writing a GitHub Actions workflow: test → build → push → deploy
+- Secrets management: API keys and SSH credentials in GitHub
+- Hands-on: Push a code change and watch it auto-deploy
+
+**Monitoring with Prometheus + Grafana**
+- What to monitor in an ML deployment: latency, error rate, throughput
+- Instrumenting a FastAPI app with `prometheus-fastapi-instrumentator`
+- Grafana dashboard basics: panels, queries, alerts
+- Hands-on: Set up a live dashboard showing your API's request metrics
+
+## What Students Will Have After This Lab
+
+- A live URL (EC2) serving predictions from their ML model
+- A GitHub repo with a working CI/CD pipeline
+- A Grafana dashboard monitoring the deployment
+- A Dockerfile they can reuse for future projects
+- Enough context to explain their deployment stack in any interview
+
+## Who Should Attend
+
+- Final year BE / MCA students with an ML project that needs deployment
+- Students preparing for product, data, or ML engineer roles
+- Anyone who has trained a model and wants to see it go live
+
+## Prerequisites
+
+- A trained ML model (pickle, PyTorch, TensorFlow, ONNX, or scikit-learn)
+- Basic Python and pip experience
+- A GitHub account
+- A laptop with Docker Desktop installed (setup guide provided 1 week before)
+
+## Delivery Format
+
+- Single intensive day (8 hours with breaks)
+- All students work on a common baseline project; those with their own projects can adapt
+- AWS environment pre-provisioned — no student pays for cloud resources during the lab
+- Post-lab: 2-week access to the EC2 environment for students to continue deploying
+
+## What the College Receives
+
+- Pre-lab environment setup checklist
+- All Docker files, GitHub Actions YAML templates, and Nginx configs
+- Participation certificates
+- Post-lab support window (email Q&A for 2 weeks)
+
+## Inquiry
+
+Ready to give your students a deployment-ready edge? [Request a proposal →](/contact?program=mlops-deployment-final-year)

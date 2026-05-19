@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+
+# Host
+Host: https://train.cosmoverge.in
+
+# Sitemaps
+Sitemap: https://train.cosmoverge.in/sitemap.xml
