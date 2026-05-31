@@ -18,6 +18,7 @@ export async function POST(req: NextRequest) {
 
   const item = await adminCreateTeamMember({
     name: body.name,
+    role: body.role ?? "instructor",
     specialization: body.specialization ?? "",
     bio: body.bio ?? "",
     tags: body.tags ?? [],
