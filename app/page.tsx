@@ -8,7 +8,7 @@ import { CtaSection } from "@/components/home/CtaSection";
 
 export const metadata: Metadata = {
   title:
-    "Harshith | AI/ML Training Programs for Engineering Colleges — Bengaluru",
+    "CosmoLearn",
   description:
     "Industry-aligned AI/ML workshops, FDPs, and bootcamps for BCA, MCA, and BE students. Computer Vision, Generative AI, MLOps. Based in Bengaluru. AICTE-eligible programs.",
   alternates: {

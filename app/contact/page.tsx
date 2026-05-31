@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { LeadFormWrapper } from "./LeadFormWrapper";
 import { CheckCircle, Clock, Mail } from "lucide-react";
+import { getAllPrograms } from "@/lib/content";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Request a Program Proposal — AI/ML Training for Your College",
@@ -28,7 +31,12 @@ const assurances = [
   },
 ];
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const dbPrograms = await getAllPrograms().catch(() => []);
+  const programNames = [
+    ...dbPrograms.map((p) => p.title),
+    "Custom / Not Sure",
+  ];
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -58,7 +66,7 @@ export default function ContactPage() {
                 required. This takes about 2 minutes.
               </p>
               <Suspense fallback={<div className="h-96 animate-pulse bg-slate-50 rounded-xl" />}>
-                <LeadFormWrapper />
+                <LeadFormWrapper programs={programNames} />
               </Suspense>
             </div>
           </div>

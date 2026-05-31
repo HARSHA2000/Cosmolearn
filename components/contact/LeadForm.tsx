@@ -39,7 +39,7 @@ const initialData: FormData = {
   notes: "",
 };
 
-const PROGRAMS = [
+const DEFAULT_PROGRAMS = [
   "Generative AI & Prompt Engineering Workshop",
   "Computer Vision Bootcamp",
   "FDP — AI Tools for Education",
@@ -69,9 +69,10 @@ const MONTHS = [
 
 interface LeadFormProps {
   defaultProgram?: string;
+  programs?: string[];
 }
 
-export function LeadForm({ defaultProgram }: LeadFormProps) {
+export function LeadForm({ defaultProgram, programs = DEFAULT_PROGRAMS }: LeadFormProps) {
   const [form, setForm] = useState<FormData>({
     ...initialData,
     program_interest: defaultProgram || "",
@@ -254,7 +255,7 @@ export function LeadForm({ defaultProgram }: LeadFormProps) {
               <SelectValue placeholder="Select a program" />
             </SelectTrigger>
             <SelectContent>
-              {PROGRAMS.map((p) => (
+              {programs.map((p) => (
                 <SelectItem key={p} value={p}>
                   {p}
                 </SelectItem>

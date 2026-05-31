@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
+import { NetworkCanvas } from "./NetworkCanvas";
 
 const credibilityItems = [
   "BMS College of Engineering",
@@ -12,6 +13,7 @@ const credibilityItems = [
 export function Hero() {
   return (
     <section className="relative bg-slate-950 pt-24 pb-20 overflow-hidden">
+      <NetworkCanvas />
       {/* Background texture */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -28,7 +30,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-4 py-1.5 mb-8">
             <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
             <span className="text-amber-400 text-sm font-medium">
-              Available for workshops — Spring / Summer 2025
+              Available for workshops, Training Programs & Hackathons           
             </span>
           </div>
 
@@ -48,17 +50,6 @@ export function Hero() {
                 Request a Program Proposal
                 <ArrowRight className="h-5 w-5 ml-1" />
               </Link>
-            </Button>
-            <Button
-              variant="outline"
-              size="xl"
-              className="border-slate-600 text-white hover:bg-slate-800 hover:border-slate-500"
-              asChild
-            >
-              <a href="/brochure.pdf" download>
-                <Download className="h-5 w-5 mr-2" />
-                Download Brochure
-              </a>
             </Button>
           </div>
 

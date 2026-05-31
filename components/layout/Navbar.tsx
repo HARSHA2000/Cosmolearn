@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,20 +43,28 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 group"
-            aria-label="Harshith AI/ML Trainer — Home"
+            className="flex items-center gap-3 group"
+            aria-label="CosmoLearn — Home"
           >
-            <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center shrink-0">
-              <span className="text-slate-900 font-black text-sm font-display">
-                H
-              </span>
+            <div className="w-11 h-11 rounded-2xl bg-white overflow-hidden shrink-0 shadow-lg transition-transform duration-200 group-hover:scale-105">
+              <Image
+                src="/cosmolearn-icon.png"
+                alt="CosmoLearn"
+                width={44}
+                height={44}
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-bold text-slate-900 text-sm font-display group-hover:text-amber-600 transition-colors">
-                Harshith
+            <div className="flex flex-col leading-none">
+              <span className="font-extrabold text-xl font-display tracking-tight leading-none">
+                <span className={scrolled ? "text-slate-900" : "text-white"}>Cosmo</span>
+                <span className={scrolled ? "text-amber-600" : "text-amber-400"}>Learn</span>
               </span>
-              <span className="text-xs text-slate-500 font-body hidden sm:block">
-                AI/ML Trainer
+              <span className={cn(
+                "text-[10px] font-medium uppercase tracking-widest mt-1 hidden sm:block transition-colors",
+                scrolled ? "text-slate-400" : "text-slate-500"
+              )}>
+                Learn | Adapt | Evolve
               </span>
             </div>
           </Link>

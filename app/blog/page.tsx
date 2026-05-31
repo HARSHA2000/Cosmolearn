@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { getAllBlogPosts } from "@/lib/mdx";
+import { getAllBlogPosts } from "@/lib/content";
 import { BlogCard } from "@/components/blog/BlogCard";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Blog — AI/ML Training Insights & Field Notes",
@@ -9,12 +11,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
 };
 
-export default function BlogPage() {
-  const posts = getAllBlogPosts();
+export default async function BlogPage() {
+  const posts = await getAllBlogPosts();
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
       <div className="bg-slate-950 pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4">
@@ -27,7 +28,6 @@ export default function BlogPage() {
         </div>
       </div>
 
-      {/* Posts grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {posts.length === 0 ? (
           <p className="text-slate-500 text-center py-20">
@@ -38,7 +38,14 @@ export default function BlogPage() {
             {posts.map((post) => (
               <BlogCard
                 key={post.slug}
-                post={post.frontmatter}
+                post={{
+                  title: post.title,
+                  slug: post.slug,
+                  date: post.date,
+                  excerpt: post.excerpt,
+                  tags: post.tags,
+                  author: post.author,
+                }}
                 slug={post.slug}
               />
             ))}

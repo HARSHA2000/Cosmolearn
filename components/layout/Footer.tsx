@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Globe, X, Code2, Mail } from "lucide-react";
+import Image from "next/image";
 
 const footerLinks = {
   Programs: [
@@ -51,19 +52,29 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center">
-                <span className="text-slate-900 font-black text-sm font-display">
-                  H
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-11 h-11 rounded-2xl bg-white overflow-hidden shrink-0 shadow-md">
+                <Image
+                  src="/cosmolearn-icon.png"
+                  alt="CosmoLearn"
+                  width={44}
+                  height={44}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex flex-col leading-none">
+                <span className="font-extrabold text-xl font-display tracking-tight leading-none">
+                  <span className="text-white">Cosmo</span>
+                  <span className="text-amber-400">Learn</span>
+                </span>
+                <span className="text-[10px] font-medium uppercase tracking-widest mt-1 text-slate-500">
+                 Learn | Adapt | Evolve
                 </span>
               </div>
-              <span className="font-bold text-white text-sm font-display">
-                Harshith
-              </span>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed mb-6">
               Industry-aligned AI/ML training programs for engineering colleges
-              across India. Built by a practitioner who ships real products.
+              across India. A Cosmoverge initiative.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((s) => (
@@ -137,7 +148,7 @@ export function Footer() {
 
         <div className="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-slate-500">
-            © {new Date().getFullYear()} Harshith / Cosmoverge. All rights
+            © {new Date().getFullYear()} CosmoLearn / Cosmoverge. All rights
             reserved.
           </p>
           <p className="text-xs text-slate-600">
