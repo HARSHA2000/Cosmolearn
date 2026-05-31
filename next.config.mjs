@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    ADMIN_SECRET: process.env.ADMIN_SECRET,
+  },
   images: {
     remotePatterns: [
       {
