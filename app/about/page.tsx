@@ -249,7 +249,7 @@ export default async function AboutPage() {
                     <div className="relative h-56 shrink-0 overflow-hidden">
                       {inst.photo_url ? (
                         <>
-                          <Image src={inst.photo_url} alt={inst.name} fill className="object-cover object-center" />
+                          <Image src={inst.photo_url} alt={inst.name} fill className="object-cover object-top" />
                           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/80 to-transparent px-5 py-4">
                             <p className="text-white font-display font-bold text-base leading-tight truncate">{inst.name}</p>
                             <p className="text-amber-300 text-xs font-medium mt-0.5 truncate">{inst.specialization}</p>
