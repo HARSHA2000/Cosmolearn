@@ -10,7 +10,7 @@ const columns = [
     border: "border-red-100",
     title: "Outdated Curriculum",
     body:
-      "Most AI/ML courses in engineering colleges still teach logistic regression and SVMs from 2019 textbooks. The tools, frameworks, and architectures driving the industry today barely appear in syllabi.",
+      "Whether it's AI/ML, Cybersecurity, Full Stack, or DevOps — engineering syllabi are stuck 3–5 years behind industry. The tools, frameworks, and architectures companies actually hire for today barely appear in coursework.",
     detail: "Last major update to many syllabi: 2019–2021",
   },
   {
@@ -21,7 +21,7 @@ const columns = [
     border: "border-amber-100",
     title: "Students Enter Jobs Unprepared",
     body:
-      "Companies hiring for AI/ML roles expect candidates who can work with HuggingFace, LangChain, YOLOv8, and FastAPI. Students trained only on theory and toy datasets have no practical vocabulary for these tools.",
+      "Hiring managers expect fluency in real tools — LangChain, Docker, penetration testing frameworks, MERN stacks, FPGA workflows — depending on the role. Students trained only on theory have no practical vocabulary for any of it.",
     detail: "Avg. ramp-up time for fresh hires: 3–6 months",
   },
   {

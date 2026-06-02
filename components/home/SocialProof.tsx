@@ -6,7 +6,7 @@ const stats = [
   { value: "500+", label: "Students trained" },
   { value: "10+", label: "College engagements" },
   { value: "3", label: "States reached" },
-  { value: "4", label: "Flagship programs" },
+  { value: "8", label: "Domains covered" },
 ];
 
 export async function SocialProof() {

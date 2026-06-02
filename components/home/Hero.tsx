@@ -3,14 +3,21 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { NetworkCanvas } from "./NetworkCanvas";
+import { getAllCollegeEngagements } from "@/lib/content";
 
-const credibilityItems = [
-  "BMS College of Engineering",
-  "Dhawan College",
-  "Mahajana PGC Mysore",
+const domains = [
+  { label: "AI / ML", cls: "bg-amber-500/10 text-amber-400 border-amber-500/20" },
+  { label: "Cybersecurity", cls: "bg-red-500/10 text-red-400 border-red-500/20" },
+  { label: "Full Stack — MERN · MEAN", cls: "bg-blue-500/10 text-blue-400 border-blue-500/20" },
+  { label: "Python · Django · FastAPI", cls: "bg-sky-500/10 text-sky-400 border-sky-500/20" },
+  { label: "DevOps & Cloud", cls: "bg-violet-500/10 text-violet-400 border-violet-500/20" },
+  { label: "VLSI Design", cls: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20" },
+  { label: "Embedded Systems", cls: "bg-teal-500/10 text-teal-400 border-teal-500/20" },
+  { label: "Robotics", cls: "bg-orange-500/10 text-orange-400 border-orange-500/20" },
 ];
 
-export function Hero() {
+export async function Hero() {
+  const colleges = await getAllCollegeEngagements().catch(() => []);
   return (
     <section className="relative bg-slate-950 pt-24 pb-20 overflow-hidden">
       <NetworkCanvas />
@@ -35,14 +42,27 @@ export function Hero() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Industry-Aligned AI/ML Training Programs for{" "}
-            <span className="text-amber-400">Engineering Colleges</span>
+            Industry-Aligned Technical Training for{" "}
+            <span className="text-amber-400">Educational Institutions</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl">
-            Hands-on workshops and FDPs designed for BCA, MCA, and BE
-            students — built by an industry practitioner, not a textbook author.
+          <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8 max-w-2xl">
+            Hands-on workshops, bootcamps, and FDPs for BCA, MCA, and BE
+            students — across AI/ML, Cybersecurity, Full Stack, DevOps, VLSI & more.
+            Built by practitioners, not textbook authors.
           </p>
+
+          {/* Domain pills */}
+          <div className="flex flex-wrap gap-2 mb-10">
+            {domains.map((d) => (
+              <span
+                key={d.label}
+                className={`px-3 py-1 rounded-full text-xs font-medium border ${d.cls}`}
+              >
+                {d.label}
+              </span>
+            ))}
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <Button variant="amber" size="xl" asChild>
@@ -54,24 +74,26 @@ export function Hero() {
           </div>
 
           {/* Credibility bar */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <span className="text-slate-500 text-sm shrink-0">
-              Past engagements:
-            </span>
-            <div className="flex flex-wrap gap-3">
-              {credibilityItems.map((college) => (
-                <div
-                  key={college}
-                  className="flex items-center gap-1.5 bg-slate-800/60 border border-slate-700/50 rounded-full px-3 py-1"
-                >
-                  <CheckCircle className="h-3.5 w-3.5 text-amber-400 shrink-0" />
-                  <span className="text-slate-300 text-xs font-medium">
-                    {college}
-                  </span>
-                </div>
-              ))}
+          {colleges.length > 0 && (
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <span className="text-slate-500 text-sm shrink-0">
+                Past engagements:
+              </span>
+              <div className="flex flex-wrap gap-3">
+                {colleges.slice(0, 4).map((college) => (
+                  <div
+                    key={college.id}
+                    className="flex items-center gap-1.5 bg-slate-800/60 border border-slate-700/50 rounded-full px-3 py-1"
+                  >
+                    <CheckCircle className="h-3.5 w-3.5 text-amber-400 shrink-0" />
+                    <span className="text-slate-300 text-xs font-medium">
+                      {college.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

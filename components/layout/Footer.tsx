@@ -73,8 +73,9 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed mb-6">
-              Industry-aligned AI/ML training programs for engineering colleges
-              across India. A Cosmoverge initiative.
+              Industry-aligned technical training across AI/ML, Cybersecurity,
+              Full Stack, DevOps, VLSI & more — for educational institutions across India.
+              A Cosmoverge initiative.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((s) => (
@@ -152,7 +153,7 @@ export function Footer() {
             reserved.
           </p>
           <p className="text-xs text-slate-600">
-            AI/ML training for engineering colleges • Bengaluru, India
+            Technical training for educational institutions • Bengaluru, India
           </p>
         </div>
       </div>

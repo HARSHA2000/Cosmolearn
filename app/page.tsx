@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title:
     "CosmoLearn",
   description:
-    "Industry-aligned AI/ML workshops, FDPs, and bootcamps for BCA, MCA, and BE students. Computer Vision, Generative AI, MLOps. Based in Bengaluru. AICTE-eligible programs.",
+    "Industry-aligned technical training for educational institutions across India. AI/ML, Cybersecurity, Full Stack, DevOps, VLSI, Embedded Systems & Robotics. Hands-on workshops, bootcamps, and FDPs. AICTE-eligible. Based in Bengaluru.",
   alternates: {
     canonical: "/",
   },
